@@ -1,7 +1,7 @@
 {
   "name": "Rahid Tag Bot",
   "logo":"https://te.legra.ph/file/0a4f06f27de1ae61784fa.jpg",
-  "description": "Rahid Tag Pulsuz şəkildə qrupunuzda hərkəsi tag edə bilər.",
+  "description": "ASO Tagger Pulsuz şəkildə qrupunuzda hərkəsi tag edə bilər.",
   "env": {
     "TOKEN": {
       "description": "@botfather botdan ala bilərsən (Zəruri)",
