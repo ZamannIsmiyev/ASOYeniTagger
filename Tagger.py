@@ -36,7 +36,7 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/komek$"))
 async def komek(event):
-  helptext = "**@ASOTagger_Bot Butonları 🤖**\n\n**/tektag - ŞƏHİDLƏRİMİZİN ADLARI İLI ÇAĞIRAR\n**/dur - botu dayandırar**\n**/tag <səbəb> - 5-li tag edər**\n**/etag <səbəb> - Emoji ilə tag edərr**\n**/mtag <səbəb> - mafia rolları ilə tag edər\n**/ttag <səbəb> - İstifadəçiləri tək tək tag edər\n**/admins <səbəb> - Yönəticiləri tək tək tag edər\n**/btag <səbəb> - Bayrağla tag edər**\n/rtag <səbəb> - Şəhərlərimizin adları ilə tag edər"
+  helptext = "**@ASOTagger_Bot Butonları 🤖**\n\n**/sehidler - ŞƏHİDLƏRİMİZİN ADLARI İLI ÇAĞIRAR\n**/dur - botu dayandırar**\n**/tag <səbəb> - 5-li tag edər**\n**/etag <səbəb> - Emoji ilə tag edərr**\n**/mtag <səbəb> - mafia rolları ilə tag edər\n**/tt <səbəb> - İstifadəçiləri tək tək tag edər\n**/admins <səbəb> - Yönəticiləri tək tək tag edər\n**/btag <səbəb> - Bayrağla tag edər**\n/rtag <səbəb> - Şəhərlərimizin adları ilə tag edər"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('➕ Məni Qurupa əlavə et ➕', 'http://t.me/ASOTaggerBot?startgroup=a')],
@@ -62,7 +62,7 @@ async def komek(event):
 sehidler = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev Nicat Mirnəbi Abdullayev Məhəmməd Ramazan Allahverənov Telman Fazil Alıyev Qələndər Nofəl Abdullayev İbrahim Habil Abdullayev Elşən Sabir Abdullayev Həsən Qərib󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳 Mübariz İbrahimov Xudayar Yusifzadə".split(" ")
 
 
-@client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/sehidler ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
