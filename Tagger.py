@@ -454,7 +454,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilərdi  @WerabliAnlar**🍷")
+        await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Burada sizin reklamınız ola bilərdi  @WerabliAnlar**🍷")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -501,7 +501,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("**Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilərdi  @ASOResmi 🇦🇿**")
+        await event.respond("**Tag prosesi uğurla dayandırıldı ✅\n\n**Burada sizin reklamınız ola bilərdi  @ASOResmi 🇦🇿**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -530,26 +530,26 @@ async def mentionall(event):
 @client.on(events.NewMessage(pattern='^(?i)/dur'))
 async def dur(event):
   global tekli_calisan
-  tekli_calisan.remove(event.chat_id)
+  analik_calisan.remove(event.chat_id)
 	
 
 
 @client.on(events.NewMessage(pattern="^/admins ?(.*)"))
-async def mentionall(tagadmin):
+async def mentionall(admins):
 
 	if tagadmin.pattern_match.group(1):
-		seasons = tagadmin.pattern_match.group(1)
+		seasons = admins.pattern_match.group(1)
 	else:
 		seasons = ""
 
-	chat = await tagadmin.get_input_chat()
+	chat = await admins.get_input_chat()
 	a_=0
-	await tagadmin.delete()
+	await admins.delete()
 	async for i in client.iter_participants(chat, filter=cp):
 		if a_ == 500:
 			break
 		a_+=5
-		await tagadmin.client.send_message(tagadmin.chat_id, "**[{}](tg://user?id={}) {}**".format(i.first_name, i.id, seasons))
+		await admins.client.send_message(admins.chat_id, "**[{}](tg://user?id={}) {}**".format(i.first_name, i.id, seasons))
 		sleep(0.5)
 
 
