@@ -36,7 +36,7 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/komek$"))
 async def komek(event):
-  helptext = "**@ASOTagger_Bot Butonları 🤖**\n\n**/sehidler - ŞƏHİDLƏRİMİZİN ADLARI İLI ÇAĞIRAR\n**/dur - botu dayandırar**\n**/tag <səbəb> - 5-li tag edər**\n**/etag <səbəb> - Emoji ilə tag edərr**\n**/mtag <səbəb> - mafia rolları ilə tag edər\n**/tektag <səbəb> - İstifadəçiləri tək tək tag edər\n**/admins <səbəb> - Yönəticiləri tək tək tag edər\n**/btag <səbəb> - Bayrağla tag edər**\n/stag <səbəb> - Şəhərlərimizin adları ilə tag edər"
+  helptext = "**@ASOTagger_Bot Butonları 🤖**\n\n**/tektag - ŞƏHİDLƏRİMİZİN ADLARI İLI ÇAĞIRAR\n**/dur - botu dayandırar**\n**/tag <səbəb> - 5-li tag edər**\n**/etag <səbəb> - Emoji ilə tag edərr**\n**/mtag <səbəb> - mafia rolları ilə tag edər\n**/ttag <səbəb> - İstifadəçiləri tək tək tag edər\n**/admins <səbəb> - Yönəticiləri tək tək tag edər\n**/btag <səbəb> - Bayrağla tag edər**\n/rtag <səbəb> - Şəhərlərimizin adları ilə tag edər"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('➕ Məni Qurupa əlavə et ➕', 'http://t.me/ASOTaggerBot?startgroup=a')],
@@ -59,10 +59,10 @@ async def komek(event):
                    )
 	
 	
-sehidler = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev Nicat Mirnəbi Abdullayev Məhəmməd Ramazan Allahverənov Telman Fazil Alıyev Qələndər Nofəl Abdullayev İbrahim Habil Abdullayev Elşən Sabir Abdullayev Həsən Qərib󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳 Mübariz İbrahimov".split(" ")
+sehidler = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev Nicat Mirnəbi Abdullayev Məhəmməd Ramazan Allahverənov Telman Fazil Alıyev Qələndər Nofəl Abdullayev İbrahim Habil Abdullayev Elşən Sabir Abdullayev Həsən Qərib󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳 Mübariz İbrahimov Xudayar Yusifzadə".split(" ")
 
 
-@client.on(events.NewMessage(pattern="^/sehidler ?(.*)"))
+@client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
@@ -129,10 +129,10 @@ async def dur(event):
 	
 	
 
-seherler = "Ağcabədi Ağdam Ağdaş Ağdərə Ağıstafa Ağsu Astara Babək Bakı Balakən Beyləqan Bərdə Biləsuvar Cəbrayıl Cəlilabad Culfa Daşkəsən Dəliməmmədli Xocalı Füzuli Gədəbəy Gəncə Goranboy Göyçay Göygöl Göytəpə Hacıqabul Horadiz Xaçmaz Xankəndi Xocalı Xocavənd Xırdalan Xızı Xudat İmişli İsmayıllı Kəlbəcər Kürdəmir Qax Qazax Qəbələ Qobustan Qovlar Quba Qubadlı Qusar Laçın Lerik Lənkəran Liman Masallı Naftalan Naxçıvan Neftçala Oğuz Ordubad Saatlı Sabirabad Salyan Samux Siyəzən Sumqayıt Şuşa Şabran Şahbuz Şamaxı Şəki Şəmkir Şərur Şirvan Tərtər Tovuz Ucar Yardımlı Yevlax Zaqatala Zəngilan Zərd󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿ab Şuşa Qarabağ Nardaran".split(" ")
+seherler = "Ağcabədi Ağdam Ağdaş Ağdərə Ağıstafa Ağsu Astara Babək Bakı Balakən Beyləqan Bərdə Biləsuvar Cəbrayıl Cəlilabad Culfa Daşkəsən Dəliməmmədli Xocalı Füzuli Gədəbəy Gəncə Goranboy Göyçay Göygöl Göytəpə Hacıqabul Horadiz Xaçmaz Xankəndi Xocalı Xocavənd Xırdalan Xızı Xudat İmişli İsmayıllı Kəlbəcər Kürdəmir Qax Qazax Qəbələ Qobustan Qovlar Quba Qubadlı Qusar Laçın Lerik Lənkəran Liman Masallı Naftalan Naxçıvan Neftçala Oğuz Ordubad Saatlı Sabirabad Salyan Samux Siyəzən Sumqayıt Şuşa Şabran Şahbuz Şamaxı Şəki Şəmkir Şərur Şirvan Tərtər Tovuz Ucar Yardımlı Yevlax Zaqatala Zəngilan Zərd󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿ab Şuşa Qarabağ Nardaran Bakı Gəncə Mingeçevir Bərdə Fizuli".split(" ")
 
 
-@client.on(events.NewMessage(pattern="^/stag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/rtag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
@@ -468,7 +468,7 @@ async def dur(event):
   anlik_calisan.remove(event.chat_id)
 	
 
-@client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/ttag ?(.*)"))
 async def mentionall(event):
   global analik_calisan
   if event.is_private:
