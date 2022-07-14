@@ -517,7 +517,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id})\n"
       if event.chat_id not in tekli_calisan:
         await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Burada sizin reklamınız ola bilərdi  @ASOResmi 🇦🇿**")
         return
@@ -527,7 +527,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-@client.on(events.NewMessage(pattern='^(?i)/dayan'))
+@client.on(events.NewMessage(pattern='^(?i)/dur'))
 async def dur(event):
   global analik_calisan
   analik_calisan.remove(event.chat_id)
@@ -535,7 +535,7 @@ async def dur(event):
 
 
 @client.on(events.NewMessage(pattern="^/admins ?(.*)"))
-async def mentionall(admins):
+async def mentionall(event):
 
 	if tagadmin.pattern_match.group(1):
 		seasons = admins.pattern_match.group(1)
