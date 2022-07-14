@@ -470,7 +470,7 @@ async def dur(event):
 
 @client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
 async def mentionall(event):
-  global tekli_calisan
+  global analik_calisan
   if event.is_private:
     return await event.respond("**Bu buton qurup və kanallar üçün keçərlidi ❗️**")
   
@@ -519,7 +519,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Buda sizin reklamınız ola bilərdi  @ASOResmi 🇦🇿**")
+        await event.respond("Tag prosesi uğurla dayandırıldı ✅\n\n**Burada sizin reklamınız ola bilərdi  @ASOResmi 🇦🇿**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -527,9 +527,9 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-@client.on(events.NewMessage(pattern='^(?i)/dur'))
+@client.on(events.NewMessage(pattern='^(?i)/dayan'))
 async def dur(event):
-  global tekli_calisan
+  global analik_calisan
   analik_calisan.remove(event.chat_id)
 	
 
